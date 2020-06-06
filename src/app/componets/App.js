@@ -1,11 +1,15 @@
 import React from 'react';
 import './../../static/css/app.css';
+import { AppContext } from "../context";
+import Layout from "./layout";
 
-export default () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+    static contextType = AppContext;
+    render() {
+        return (
+            <AppContext.Provider>
+                <Layout/>
+            </AppContext.Provider>
+        );
+    }
 }
