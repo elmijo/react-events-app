@@ -8,7 +8,7 @@ export default class App extends React.Component {
     render() {
         return (
             <AppContext.Provider>
-                <Layout/>
+                <Layout appName="Events"/>
             </AppContext.Provider>
         );
     }

@@ -1,7 +1,10 @@
 import React from 'react';
-const Layout = () => (
+import Header from "./Header";
+import Content from "./Content";
+const Layout = (props) => (
     <div>
-        Layout
+        <Header appName={props.appName}></Header>
+        <Content></Content>
     </div>
 );
 
