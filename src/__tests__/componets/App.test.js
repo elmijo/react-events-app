@@ -12,7 +12,7 @@ test('Render App Header', () => {
   const button = container.querySelector('header button');
   expect(header).toBeInTheDocument();
   expect(button).toBeInTheDocument();
-  expect(getByText(/Events/i)).toBeInTheDocument();
+  expect(getByText(/^Events/i)).toBeInTheDocument();
   expect(getByText(/New Event/i)).toBeInTheDocument();
 
 });

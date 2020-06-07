@@ -22,7 +22,8 @@
       "description": "Jiu jitsu and wrestling",
       "location": "Corrientes 242",
       "date": "2022-05-01",
-      "categoryId": 1
+      "categoryId": 1,
+      "subscribed": true
     },
     {
       "id": 3,

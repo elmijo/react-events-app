@@ -10,7 +10,7 @@ beforeAll(async () => {
         res.writeHead(200, {'Content-Type': 'application/json', 'access-control-allow-origin': '*' });
 
         res.end(JSON.stringify(req.url === '/events' ? events : categories));
-    }).listen(8000);
+    }).listen(8080);
 });
 
 afterAll(() => {

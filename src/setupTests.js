@@ -4,4 +4,4 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/extend-expect';
 
-process.env.API_BASE_URI='http://localhost:8000';
+process.env.REACT_APP_API_BASE_URI='http://localhost:8080';
