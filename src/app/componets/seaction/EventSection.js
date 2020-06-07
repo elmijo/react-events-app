@@ -16,7 +16,7 @@ export default class EventSection extends React.Component {
                     )}
                 </AppContext.Consumer>
                 <AppContext.Consumer>
-                    {({ categoryEvents, categories }) => (
+                    {({ categoryEvents }) => (
                         <>
                             {categoryEvents.map((eventList, index) => (
                                 <SectionList title={eventList.title} key={index}>

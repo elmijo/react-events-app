@@ -4,7 +4,7 @@ html, body {
 body {
   background-color: #3AAFA9;
 }
-button {
+button, input[type=submit] {
   background-color: #2B7A78;
   color: #17252A;
   padding: 10px 32px;
@@ -17,11 +17,11 @@ button {
   cursor: pointer;
   border: solid 1px #2B7A78;
 }
-button:hover {
+button:hover, input[type=submit] {
   background-color: #3AAFA9;
   border: solid 1px #17252A;
 }
-button:focus {
+button:focus, input[type=submit] {
   outline: unset;
 }
 
@@ -93,6 +93,32 @@ input[type="checkbox"]:checked + label::after {
   transition: .25s all ease;
 }
 
+input[type=text], input[type=date], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #DEF2F1;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+}
+input[type=text]:hover, input[type=date]:hover, select:hover,
+input[type=text]:active, input[type=date]:active, select:active,
+input[type=text]:focus, input[type=date]:focus, select:focus {
+  border-color: #3AAFA9;
+}
+
+input[type=text].invalid, input[type=date].invalid, select.invalid,
+input[type=text].invalid:hover, input[type=date].invalid:hover, select.invalid:hover,
+input[type=text].invalid:active, input[type=date].invalid:active, select.invalid:active,
+input[type=text].invalid:focus, input[type=date].invalid:focus, select.invalid:focus {
+  border-color: darkred;
+}
+
+form label {
+  color: #2B7A78;
+}
 
 /*input[type=checkbox] {*/
 /*  -webkit-appearance: none;*/

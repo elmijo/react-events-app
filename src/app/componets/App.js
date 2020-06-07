@@ -12,18 +12,32 @@ export default class App extends React.Component {
             events: [],
             upcoming: [],
             categoryEvents: [],
+            categories: [],
+            addEvent: this.addEvent.bind(this)
         }
     }
 
     async componentDidMount() {
         const categories = await api.category.list();
         const events = await api.event.list();
+        const { upcoming, categoryEvents} = this.parseEvents(events, categories);
+        this.setState({ events, categories, upcoming, categoryEvents });
+    }
+
+    parseEvents(events, categories) {
         const upcoming = orderEvents(randomItems(events, 3));
         const categoryEvents = groupEvents(excludeEvents(events, upcoming)).map((group, index) => ({
             title: categories[index].label,
             items: orderEvents(group)
         }));
-        this.setState({ events, categories, upcoming, categoryEvents });
+        return {upcoming, categoryEvents};
+    }
+
+    addEvent (newEvent) {
+        const { events, categories } = this.state;
+        events.push(newEvent);
+        const { upcoming, categoryEvents } = this.parseEvents(events, categories);
+        this.setState({ events, upcoming, categoryEvents });
     }
 
     render() {
