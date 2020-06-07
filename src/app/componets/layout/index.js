@@ -10,7 +10,7 @@ const Layout = (props) => (
             <CreateEvent></CreateEvent>
         </Header>
         <Content>
-            <EventSection title={"All Events"} />
+            <EventSection title={"Upcoming Events"} />
         </Content>
     </div>
 );

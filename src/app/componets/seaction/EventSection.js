@@ -7,13 +7,26 @@ import SectionList from "./SectionList";
 export default class EventSection extends React.Component {
     render() {
         return (
-            <AppContext.Consumer>
-                {({ events }) => (
-                    <SectionList title={this.props.title}>
-                        {events.map((item, index) => <Event key={index} {...item} />)}
-                    </SectionList>
-                )}
-            </AppContext.Consumer>
+            <>
+                <AppContext.Consumer>
+                    {({ upcoming }) => (
+                        <SectionList title={this.props.title}>
+                            {upcoming.map((item, index) => <Event key={index} {...item} />)}
+                        </SectionList>
+                    )}
+                </AppContext.Consumer>
+                <AppContext.Consumer>
+                    {({ categoryEvents, categories }) => (
+                        <>
+                            {categoryEvents.map((eventList, index) => (
+                                <SectionList title={eventList.title} key={index}>
+                                    {eventList.items.map((item, index) => <Event key={index} {...item} />)}
+                                </SectionList>
+                            ))}
+                        </>
+                    )}
+                </AppContext.Consumer>
+            </>
         );
     }
 }

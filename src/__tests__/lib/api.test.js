@@ -18,18 +18,16 @@ afterAll(() => {
     server = null;
 });
 
-describe("Test API services", () => {
-    test("Get events", async () => {
-        const events = await api.event.list();
-        expect(events.length).toBe(8);
-        expect(events[0].id).toBe(0);
-        expect(events[0].label).toBe('SCRUM Alliance Catch-up');
-    });
+test("Get events", async () => {
+    const events = await api.event.list();
+    expect(events.length).toBe(8);
+    expect(events[0].id).toBe(0);
+    expect(events[0].label).toBe('SCRUM Alliance Catch-up');
+});
 
-    test("Get categories", async () => {
-        const categories = await api.category.list();
-        expect(categories.length).toBe(4);
-        expect(categories[0].id).toBe(0);
-        expect(categories[0].label).toBe('Work');
-    });
+test("Get categories", async () => {
+    const categories = await api.category.list();
+    expect(categories.length).toBe(4);
+    expect(categories[0].id).toBe(0);
+    expect(categories[0].label).toBe('Work');
 });
