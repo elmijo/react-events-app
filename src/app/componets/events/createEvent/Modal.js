@@ -1,7 +1,14 @@
 import React from "react";
 import '../../../../static/scss/components/modal.scss';
+import PropTypes from "prop-types";
 
 export default class Modal extends React.Component {
+    static propTypes = {
+        title: PropTypes.string.isRequired,
+        show: PropTypes.bool.isRequired,
+        onCreate: PropTypes.func.isRequired,
+        onCancel: PropTypes.func.isRequired,
+    };
     render() {
         if (!this.props.show) {
             return false;

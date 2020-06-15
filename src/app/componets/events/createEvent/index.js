@@ -2,8 +2,12 @@ import React from "react";
 import Modal from "./Modal";
 import {AppContext} from "../../../context";
 import api from "../../../lib/api";
+import PropTypes from "prop-types";
 
 export default class CreateEvent extends React.Component {
+    static propTypes = {
+        addEvent: PropTypes.func.isRequired,
+    };
     constructor(props) {
         super(props);
         this.state = {

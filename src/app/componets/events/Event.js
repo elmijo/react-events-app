@@ -1,8 +1,18 @@
 import React from "react";
-import './../../../static/scss/components/event.scss';
+import PropTypes from 'prop-types';
 import api from "../../lib/api";
+import './../../../static/scss/components/event.scss';
 
 export default class Event extends React.Component {
+    static propTypes = {
+        id: PropTypes.number.isRequired,
+        label: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        location: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        categoryId: PropTypes.number.isRequired,
+        subscribed: PropTypes.bool
+    };
     constructor(props) {
         super(props);
         this.state = {

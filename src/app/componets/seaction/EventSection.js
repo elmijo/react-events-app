@@ -3,8 +3,12 @@ import { Event } from "./../events";
 import {AppContext} from "../../context";
 import './../../../static/scss/components/section.scss';
 import SectionList from "./SectionList";
+import PropTypes from "prop-types";
 
 export default class EventSection extends React.Component {
+    static propTypes = {
+        title: PropTypes.string.isRequired
+    };
     render() {
         return (
             <>
