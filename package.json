@@ -22,7 +22,8 @@
     "analyze": "react-scripts build && source-map-explorer 'build/static/js/*.js'"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "ignorePatterns": ["src/__tests__/**/*.js"]
   },
   "browserslist": {
     "production": [
@@ -38,7 +39,10 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "json-server": "^0.16.1",
+    "sinon": "^9.0.2",
     "source-map-explorer": "^2.4.2"
   },
   "engineStrict": true,

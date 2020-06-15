@@ -2,7 +2,7 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 // import { screen } from '@testing-library/dom'
 
-import App from './../../app/componets/App';
+import App from '../../app/components/App';
 
 afterEach(cleanup);
 
