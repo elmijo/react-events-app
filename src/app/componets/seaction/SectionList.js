@@ -1,5 +1,5 @@
 import React from "react";
-import './../../../static/css/section.css';
+import './../../../static/scss/components/section.scss';
 export default class SectionList extends React.Component {
     render() {
         const {title} = this.props;

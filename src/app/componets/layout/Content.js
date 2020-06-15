@@ -1,5 +1,5 @@
 import React from "react";
-import "./../../../static/css/content.css"
+import "./../../../static/scss/components/content.scss"
 
 export default class Content extends React.Component {
     render() {

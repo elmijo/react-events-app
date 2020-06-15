@@ -1,5 +1,5 @@
 import React from 'react';
-import './../../static/css/app.css';
+import './../../static/scss/components/app.scss';
 import { AppContext } from "../context";
 import Layout from "./layout";
 import api from "../lib/api";
@@ -25,7 +25,7 @@ export default class App extends React.Component {
     }
 
     parseEvents(events, categories) {
-        const upcoming = orderEvents(randomItems(events, 3));
+        const upcoming = orderEvents(randomItems(events, 5));
         const categoryEvents = groupEvents(excludeEvents(events, upcoming)).map((group, index) => ({
             title: categories[index].label,
             items: orderEvents(group)

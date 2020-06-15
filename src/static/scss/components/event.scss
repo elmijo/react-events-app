@@ -1,0 +1,32 @@
+@import "../base/colors";
+
+.event {
+    background-color: $colorFour;
+    padding: 10px 20px;
+    position: relative;
+    h3 {
+        color: $colorTwo;
+        margin-top: 0;
+        font-size: 16px;
+    }
+    .label {
+        background-color: $colorTwo;
+        color: $colorFour;
+        font-size: 12px;
+        padding: 4px;
+        display: inline-block;
+        font-weight: bold;
+    }
+    .content {
+        margin-top: 14px;
+        p {
+            font-size: 14px;
+            margin-top: 0;
+            color: $colorTwo;
+        }
+    }
+    .actions {
+        position: absolute;
+        bottom: 20px;
+    }
+}

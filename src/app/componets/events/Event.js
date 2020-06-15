@@ -1,5 +1,5 @@
 import React from "react";
-import './../../../static/css/event.css';
+import './../../../static/scss/components/event.scss';
 import api from "../../lib/api";
 
 export default class Event extends React.Component {

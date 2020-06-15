@@ -1,7 +1,7 @@
 import React from "react";
 import { Event } from "./../events";
 import {AppContext} from "../../context";
-import './../../../static/css/section.css';
+import './../../../static/scss/components/section.scss';
 import SectionList from "./SectionList";
 
 export default class EventSection extends React.Component {

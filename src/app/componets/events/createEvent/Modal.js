@@ -1,5 +1,5 @@
 import React from "react";
-import '../../../../static/css/modal.css';
+import '../../../../static/scss/components/modal.scss';
 
 export default class Modal extends React.Component {
     render() {
