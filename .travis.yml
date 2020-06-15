@@ -1,0 +1,13 @@
+os: linux
+dist: trusty
+language: node_js
+node_js: '13.9.0'
+
+before_script:
+  - mv .env.example .env.local
+  - yarn install
+script: yarn test
+
+cache:
+  yarn: true
+

@@ -1,5 +1,7 @@
 # React Events
 
+[![Build Status](https://travis-ci.org/ElMijo/react-events-app.svg?branch=master)](https://travis-ci.org/ElMijo/react-events-app)
+
 This project is an implementation of simple event application to list, create and subscribe events using [React](https://es.reactjs.org/docs/context.html) (only using Context) and [json-server](https://github.com/typicode/json-server).
 
 ## Use Cases
